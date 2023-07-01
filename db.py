@@ -1,9 +1,9 @@
 import sqlite3
+import config
 
-DATABASE = 'nuwe.db'
 
 def create_connection():
-    return sqlite3.connect(DATABASE)
+    return sqlite3.connect(config.DATABASE_NAME)
 
 def close_connection(conn):
     conn.close()
