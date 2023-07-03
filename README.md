@@ -82,6 +82,9 @@ The encryption algorithmm used is bcrypt. The password is hashed and stored in t
 ### MFA AUTHENTICATION Used
 I used the jwt token for the access control because it is a secure way to authenticate users and also to verify if a user is an admin or not which will be used for the logging system logic.
 
+### SQLITE3 Used
+I used sqlite3 because it is a lightweight database and it is easy to use. It is also a good database for small applications. I used the database to store the user information and the logs of the users and also query the database to get the information. I created a utility file to handle the database operations and also to create the database tables.
+
 ### Logging Task 3
 
 #### Get Logs
