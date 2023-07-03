@@ -1,10 +1,14 @@
 from flask import Flask
 from flask_restful import Api
 from routes import register_routes
-from flask_cors import CORS
+from flask_jwt_extended import JWTManager
+import config
 
 app = Flask(__name__) 
 api = Api(app)
+jwt = JWTManager(app)
+
+app.config['JWT_SECRET_KEY'] = config.JWT_SECRET_KEY
 
 register_routes(api)
 
